@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Web Interativa com Ajax e PHP</title>
+<script language="javascript">
+	function MostraFilhos()
+	{
+		var celulas = document.getElementsByTagName('td');
+		for(i=0; i<celulas.length; i++) {
+			var e = celulas[i].childNodes;
+			alert(e[0].nodeValue);
+		}
+	}
+</script>
+</head>
+<body>
+<table border="1">
+<tr><td>Novatec Editora</td></tr>
+<tr><td>Livro de PHP</td></tr>
+</table>
+<a href="javascript:MostraFilhos();">Mostra filhos</a>
+</body>
+</html>

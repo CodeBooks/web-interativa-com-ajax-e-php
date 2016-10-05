@@ -1,0 +1,35 @@
+.gremio {
+	border: thin solid black;
+	padding: 5%;
+	font-size: 16pt;
+	color: #000000;
+	background-color: #00CCFF;
+}
+.palmeiras {
+	border: thin solid black;
+	padding: 5%;
+	font-size: 16pt;
+	color: #FFFFFF;
+	background-color: #008000;
+}
+.cruzeiro {
+	border: thin solid black;
+	padding: 5%;
+	font-size: 16pt;
+	color: #FFFFFF;
+	background-color: #003399;
+}
+.flamengo {
+	border: thin solid black;
+	padding: 5%;
+	font-size: 16pt;
+	color: #FFFFFF;
+	background-color: #FF0000;
+}
+.criciuma {
+	border: thin solid black;
+	padding: 5%;
+	font-size: 16pt;
+	color: #000000;
+	background-color: #FFFF00;
+}

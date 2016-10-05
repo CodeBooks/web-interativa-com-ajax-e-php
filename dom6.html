@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Web Interativa com Ajax e PHP</title>
+<script language="javascript">
+function NodoPai()
+{
+	nodoAtual = document.getElementById("paragrafo");
+	pai = nodoAtual.parentNode;
+
+	if(pai)
+	{
+		if(pai.nodeType == 1)
+		{
+			alert("O nodo pai do parágrafo é " + pai.nodeName);
+		}
+	}
+}
+</script>
+</head>
+<body>
+<p id="paragrafo">Esté é um parágrafo.</p>
+<a href="javascript:NodoPai();">Ver nodo pai</a>
+</body>
+</html>

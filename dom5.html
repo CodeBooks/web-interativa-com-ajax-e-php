@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Web Interativa com Ajax e PHP</title>
+<script language="javascript">
+function NodoFilho()
+{
+	filhos = document.childNodes;
+	for(i=0; i<filhos.length; i++)
+	{
+	  if(filhos[i].nodeType == 1) // verifica se é um nodo do tipo Element
+		alert(filhos[i].nodeName);
+	}
+}
+</script>
+</head>
+<body>
+<a href="javascript:NodoFilho();">O nodo filho do documento é...</a>
+</body>
+</html>

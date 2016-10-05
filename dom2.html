@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Web Interativa com Ajax e PHP</title>
+<script language="javascript">
+	function CriaColuna()
+	{
+		var linha = document.getElementById('linha');
+		var novaColuna = document.createElement('td');
+		var novoTexto = document.createTextNode('Nova coluna');
+		novaColuna.appendChild(novoTexto);
+		linha.appendChild(novaColuna);
+	}
+</script>
+</head>
+<body>
+<a href="javascript:CriaColuna();">Criar coluna</a>
+<table border="1">
+<tr id="linha">
+</tr>
+</table>
+</body>
+</html>

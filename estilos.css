@@ -1,0 +1,42 @@
+body {
+	background-color: #CCCCCC;
+	color: #000000;
+}
+h1 {
+	font-size: 16pt;
+	font-weight: bold;
+	color: #0000FF;
+}
+h2 {
+	font-size: 14pt;
+	font-style: normal;
+	color: #000080;
+}
+
+.rodape {
+	font-size: 10pt;
+	color: #000080;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #FFFF00;
+}
+.caixa {
+	border-right-style: dashed;
+	border-bottom-style: dashed;
+	border-left-style: dashed;
+	border-top-style: dashed;
+	border-right-color: #747070;
+	background-color: #ffffff;
+	border-bottom-color: #747070;
+	border-left-color: #747070;
+	border-top-color: #747070;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 10px;
+}
+a:link {
+	color: #000000; 
+}
+a:link:hover {
+	color: #FF0000; text-decoration:none; 
+}

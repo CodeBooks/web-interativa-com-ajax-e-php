@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>Web Interativa com Ajax e PHP</title>
+<script language="javascript">
+	function AlteraTexto()
+	{
+		txt = document.getElementById("um").firstChild.nodeValue;
+		document.getElementById("um").firstChild.nodeValue = "O texto foi alterado!";
+	}
+</script>
+</head>
+<body>
+<p id="um">Este é o texto original.</p>
+<a href="javascript:AlteraTexto();">Alterar</a>
+</body>
+</html>

@@ -1,0 +1,35 @@
+.preco {color: #006600}
+.frete {color: #0000FF}
+.titulo {font-size: 14pt}
+.fundocinza {background-color:#EEEEEE}
+.fundolaranja {background-color:#FFF2E6}
+p {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+.descricao {
+	font-size: 10pt;
+	font-weight:normal;
+	text-decoration:underline;
+}
+.rodape {
+	font-size: 9pt;
+	font-weight:normal;
+	background-color: #EEEEEE;
+}
+.aviso {
+	border: thin solid black;
+	font-size: 12pt;
+	font-weight:bold;
+	color: #000000;
+	background-color: #FFFF00;
+}
+.promocao {
+	color: #FF0000;
+	font-size: 8pt;
+}
+.erro {
+	font-size: 14pt;
+	color:#FF0000;
+}

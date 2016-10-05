@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>Web Interativa com Ajax e PHP</title>
+<style type="text/css">
+div.camada1 {
+background-color: cyan;
+width:100px;
+height:100px;
+position:absolute;
+top: 50px;
+left: 50px;
+border-right-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+border-top-style: solid;
+border-right-color: navy;
+border-bottom-color: navy;
+border-left-color: navy;
+border-top-color: navy;
+}
+div.camada2 {
+background-color: yellow;
+width:100px;
+height:100px;
+position:absolute;
+top: 50px;
+left: 180px;
+border-right-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+border-top-style: solid;
+border-right-color: navy;
+border-bottom-color: navy;
+border-left-color: navy;
+border-top-color: navy;
+}
+</style>
+<script language="javascript">
+	function alteraVisibilidade()
+	{
+		cam = document.getElementById('c1');
+		if(cam.style.visibility=='hidden')
+			cam.style.visibility='visible';
+		else
+			cam.style.visibility='hidden';
+	}
+	function alteraVisibilidade2()
+	{
+		cam = document.getElementById('c2');
+		if(cam.style.display=='none')
+			cam.style.display='inline';
+		else
+			cam.style.display='none';
+	}
+
+</script>
+</head>
+<body>
+<div id="c1" class="camada1">Texto da camada 1</div>
+<div id="c2" class="camada2">Texto da camada 2</div>
+<form>
+	<input type="button" value="Alterar Camada 1" onClick="alteraVisibilidade();">
+	<input type="button" value="Alterar Camada 2" onClick="alteraVisibilidade2();">
+</form>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>Web Interativa com Ajax e PHP</title>
+<script>
+var docXML = null;
+
+function criaXML() {
+	if (window.XMLHttpRequest)
+	  {
+	  xhttp=new XMLHttpRequest();
+	  }
+	else // para IE 5/6
+	  {
+	  xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  }
+	xhttp.open("GET","futebol.xml",false);
+	xhttp.send();
+	docXML=xhttp.responseXML;
+}
+
+
+function ExibeXML() {
+	if(docXML==null) {
+		alert('Erro na utilização do XMLdocument');
+	} else {		   
+	
+		document.write("<table border='1'><tr><th>Jogador</th><th>Posição</th></tr>");
+		var x=docXML.getElementsByTagName("jogador");
+		for (i=0;i<x.length;i++)
+		{
+		  document.write("<tr><td>");
+		  document.write(x[i].getElementsByTagName("nome")[0].childNodes[0].nodeValue);
+		  document.write("</td><td>");
+		  document.write(x[i].getElementsByTagName("posicao")[0].childNodes[0].nodeValue);
+		  document.write("</td></tr>");
+		}
+		document.write("</table>");	
+	}
+}
+
+function InsereJogador(nome, posicao)
+{
+	raiz = docXML.getElementsByTagName("jogadores")[0];
+	var novo = docXML.createElement('jogador');	//tag jogador
+	var n = docXML.createElement('nome');	// tag nome
+	var t = docXML.createTextNode(nome);
+	n.appendChild(t);
+	var p = docXML.createElement('posicao');	// tag posicao
+	var t2 = docXML.createTextNode(posicao);
+	p.appendChild(t2);
+	novo.appendChild(n);
+	novo.appendChild(p);
+	raiz.appendChild(novo);
+}
+
+</script>
+</head>
+
+<body>
+	<pre><div id="texto"></div></pre>
+	<script>
+		criaXML();
+		InsereJogador('Cicinho', 'Lateral');
+		ExibeXML();
+	</script>
+</body>
+</html>

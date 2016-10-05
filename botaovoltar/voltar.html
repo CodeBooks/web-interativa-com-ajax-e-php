@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Web Interativa com Ajax e PHP</title>
+<script language="javascript" src="voltar.js"></script>
+<script language="javascript" type="text/javascript">
+
+function mostraHora () {
+	var ajax = iniciaAjax();
+	ajax.open("POST", "hora.php", true);
+	ajax.onreadystatechange = function () {
+		if (ajax.readyState == 4) {
+			var conteudo = document.getElementById("divHora");
+			conteudo.innerHTML = ajax.responseText;
+			v_salvaEstado ();	// salva o novo conteúdo na cache
+		}
+	}
+	ajax.send ("");
+}
+</script>
+</HEAD>
+<body onload="v_inicia('divPrincipal');">
+<div id="divPrincipal">
+<h2 align="center">Detectando o botão "Voltar"</b></h2>
+<div id="divHora"></div>
+<form id="frm1">
+<p align="center">
+<input type="button" id="botaoHora" value="Mostra Hora" onClick="mostraHora();">
+</p>
+</form>
+</div>
+
+<!-- iframe invisível (obrigatório) -->
+<iframe name="frameAuxiliar" id="frameAuxiliar" width="0" height="0" style="visibility: hidden; inline: none;">
+</iframe>
+<!-- espaço para depuração (se houver) -->
+<div id="divInformacao">
+</div>
+</body>
+</html>

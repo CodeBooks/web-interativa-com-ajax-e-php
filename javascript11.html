@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Web Interativa com Ajax e PHP</title>
+<script language="javascript">
+	function Propriedades() { 
+		var indice = document.form.avaliar.selectedIndex;
+		var texto = "Índice da opção escolhida: " + indice;
+		texto += "\nNúmero de opções do select: " + document.form.avaliar.length;
+		texto += "\nValor da opção escolhida: " + document.form.avaliar.options[indice].value;
+		texto += "\nTexto da opção escolhida: " + document.form.avaliar.options[indice].text;
+		alert(texto);
+	}
+</script>
+</head>
+<body>
+<form name="form">
+	<select name="avaliar"> 
+		<option value="1">Bom 
+		<option value="2">Médio
+		<option value="3">Ruim 
+	</select>
+	<input type="button" value="Ok" onClick="Propriedades();"> 
+</form>
+</body>
+</html>

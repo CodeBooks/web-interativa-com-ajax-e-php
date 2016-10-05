@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Web Interativa com Ajax e PHP</title>
+<script language="javascript">
+function Inserir()
+{
+	var novo = document.createElement("span");
+	var novoConteudo = document.createTextNode("Inserindo novo texto.");
+	novo.appendChild(novoConteudo);
+	var textoAtual = document.getElementById("t1");
+	var paiAtual = textoAtual.parentNode;
+	paiAtual.insertBefore(novo, textoAtual);
+}
+</script>
+</head>
+<body>
+<div>
+	<span id="t1">Texto 1</span><br />
+	<a href="javascript:Inserir();">Inserir</a>
+</div>
+</body>
+</html>

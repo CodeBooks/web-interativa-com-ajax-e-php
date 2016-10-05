@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>Web Interativa com Ajax e PHP</title>
+<script language="javascript">
+	function JanelaAviso () {
+		janela = window.open('', 'Cadastro', 'width=200,height=200,toolbar=no,location=no,status=no,scrollbars=no,resizable=no');
+		janela.document.write("<p>Para acessar o site você precisa se cadastrar!</p>");
+		janela.document.write("<p><a href='javascript:window.close();'>Fechar</a></p>");
+	}
+</script>
+</head>
+<body>
+ <p><a href="#" onClick="JanelaAviso();">Acessar o site</a></p>
+</body>
+</html>

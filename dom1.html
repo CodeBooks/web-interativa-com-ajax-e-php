@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Web Interativa com Ajax e PHP</title>
+
+<script language="javascript">
+	function Incluir()
+	{
+		var texto = document.meuForm.texto.value;
+		var lista = document.getElementById('minhaLista');
+		var novoItem = document.createElement('LI');
+		var novoTexto = document.createTextNode(texto);
+		lista.appendChild(novoItem);
+		novoItem.appendChild(novoTexto);
+	}
+</script>
+
+</head>
+<body>
+
+<form name="meuForm">
+	<input type="text" name="texto">
+	<input type="button" value="Inserir" onClick="Incluir();">
+</form>
+
+<ul id="minhaLista">
+	<li>Esta é minha lista</li>
+</ul>
+
+</body>
+</html>

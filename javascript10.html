@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Web Interativa com Ajax e PHP</title>
+<script language="javascript">
+	function trocaCor() { 
+		var i;
+		for (i=0;i<document.form.cor.length;i++)
+		{ 
+			if (document.form.cor[i].checked) 
+				break; 
+		} 
+		document.bgColor = document.form.cor[i].value;
+	}
+</script>
+</head>
+<body>
+<form name="form">
+	<input type="radio" name="cor" value="FFFFFF" onClick="trocaCor();"> Branco <br> 
+	<input type="radio" name="cor" value="FF0000" onClick="trocaCor();"> Vermelho <br> 
+	<input type="radio" name="cor" value="00FF00" onClick="trocaCor();"> Verde <br> 
+	<input type="radio" name="cor" value="0000FF" onClick="trocaCor();"> Azul <br> 
+	<input type="radio" name="cor" value="000000" onClick="trocaCor();"> Preto <br>
+</form>
+</body>
+</html>

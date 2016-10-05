@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Web Interativa com Ajax e PHP</title>
+<script language="javascript">
+	function Verificar () {
+		if(document.formulario.aceitar.checked==false)
+			alert("Você deve aceitar os termos do contrato!");
+		else
+			alert("Concluído!");
+	}
+</script>
+</head>
+<body>
+ <form name="formulario">
+	Aqui vai o texto do contrato...<br>
+ 	<input type="checkbox" name="aceitar" value="sim"> Aceito o contrato<br>
+	<input type="button" value="Prosseguir" onClick="Verificar();">
+ </form>
+</body>
+</html>

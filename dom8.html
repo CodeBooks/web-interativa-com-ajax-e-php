@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>Web Interativa com Ajax e PHP</title>
+<script language="javascript">
+function Remover()
+{
+	var d = document.getElementById("times"); 
+	var time = document.getElementById("mengo"); 
+	if(time)
+		var removido = d.removeChild(time);
+}
+</script>
+</head>
+<body>
+<div id="times">
+	<div id="gremio">Grêmio</div> 
+	<div id="mengo">Flamengo</div> 
+</div>
+<a href="javascript:Remover();">Remover Flamengo</a>
+</body>
+</html>

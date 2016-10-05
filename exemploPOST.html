@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Web Interativa com Ajax e PHP</title>
+<script>
+var ajax;
+
+function IniciaAjax(){
+	var ajax;
+	if(window.XMLHttpRequest){	  // Mozilla, Safari,...
+		ajax = new XMLHttpRequest();
+	} else if (window.ActiveXObject){	// IE
+		ajax = new ActiveXObject("Msxml2.XMLHTTP");
+		if (!ajax) {
+			ajax = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+    } 
+	else {
+        alert("Seu navegador não possui suporte a essa aplicação!");
+	}
+	return ajax;
+}
+
+function Processa()
+{
+	ajax = IniciaAjax();
+	if(ajax)
+	{
+		ajax.onreadystatechange = function(){
+			if(ajax.readyState == 4) {
+				if(ajax.status == 200) {
+					document.getElementById("resultado").value = ajax.responseText;
+				} else {
+					alert(ajax.statusText);
+				}
+			}
+		}
+		
+		nome = document.getElementById("nome").value;
+		valor = document.getElementById("valor").value;
+		dados = 'nome='+nome+"&valor="+valor;
+	
+		ajax.open('POST', 'processa.php', true);
+		ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+		ajax.send(dados);
+	}
+}
+</script>
+</head>
+
+<body>
+<form name="form1" method="post" action="">
+  Nome: <input name="nome" type="text" id="nome" value="Juliano"><br>
+  Digite um valor: <input name="valor" type="text" id="valor" value="3"><br>
+  <button type="button" onclick="Processa();">Processar</button>
+  <hr>Resultado: <input type="text" id="resultado" readonly="true" size="60">
+</form>
+</body>
+</html>

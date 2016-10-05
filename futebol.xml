@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<jogadores>
+	<jogador>
+		<nome>Ronaldinho Gaúcho</nome>
+		<posicao>Meio-campo</posicao>
+	</jogador>
+	<jogador>
+		<nome>Dida</nome>
+		<posicao>Goleiro</posicao>
+	</jogador>
+	<jogador>
+		<nome>Robinho</nome>
+		<posicao>Atacante</posicao>
+	</jogador>
+</jogadores>
